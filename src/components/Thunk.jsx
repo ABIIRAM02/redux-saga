@@ -13,8 +13,6 @@ const Thunk = () => {
     dispatch(fetchPosts())
   } , [])
 
-  console.log(loading , error);
-
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -22,13 +20,13 @@ const Thunk = () => {
   if (error) {
     return <div>Error: {error}</div>;
   }
-  userData && console.log(userData);
+
   return (
     <div>
       <h2>hello Abii</h2>
       {
         userData?.map(data => 
-          <h2>{data.id}</h2>
+          <h2 key={data.id} >{data.title}</h2>
           )
       }
     </div>
