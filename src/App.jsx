@@ -1,9 +1,9 @@
-import Thunk from "./components/Thunk";
+import Saga from "./components/Saga";
 
 function App() {
   return (
     <main>
-      <Thunk />
+      <Saga />
     </main>
   );
 }
